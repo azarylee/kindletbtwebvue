@@ -1,5 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import babel from 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 // import router from './router'
@@ -12,11 +13,12 @@ import content from '@/components/content'
 import hotcate from '@/components/hotcate'
 import pincate from '@/components/pincate'
 import readBooks from '@/components/readBooks'
+import readStory from '@/components/readStory'
 import bookcate from '@/components/bookcate'
 import colcate from '@/components/colcate'
+import menudiv from '@/components/menudiv'
 import bottommenu from '@/components/bottommenu'
-import globalvar from '@/components/global'
-Vue.use(globalvar);
+import bottommenur from '@/components/bottommenur'
 
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';    // 使用 CSS
@@ -31,6 +33,7 @@ new Vue({
   el: '#app',
   render: h => h(App),
   data:{
-    eventBus: new Vue ()
+    eventBus: new Vue (),
+    airBus: new Vue ()
   }
 })
